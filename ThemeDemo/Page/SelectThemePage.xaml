@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    x:Class="ThemeDemo.Page.SelectThemePage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    BackgroundColor="{DynamicResource PageBackgroundColor}">
+    <ContentPage.Content>
+        <Grid Padding="16">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60" />
+                <RowDefinition Height="60" />
+                <RowDefinition Height="60" />
+            </Grid.RowDefinitions>
+            <Label
+                Grid.Row="0"
+                Grid.Column="0"
+                Text="Follow System"
+                VerticalOptions="Center" />
+            <CheckBox
+                Grid.Row="0"
+                Grid.Column="1"
+                CheckedChanged="FollowSystemCheckedChanged"
+                HorizontalOptions="End"
+                IsChecked="{Binding IsSystem}"
+                IsEnabled="{Binding IsSystemEnable}" />
+            <Label
+                Grid.Row="1"
+                Grid.Column="0"
+                Text="Light"
+                VerticalOptions="Center" />
+            <CheckBox
+                Grid.Row="1"
+                Grid.Column="1"
+                CheckedChanged="LightCheckedChanged"
+                HorizontalOptions="End"
+                IsChecked="{Binding IsLight}"
+                IsEnabled="{Binding IsLightEnable}" />
+            <Label
+                Grid.Row="2"
+                Grid.Column="0"
+                Text="Dark"
+                VerticalOptions="Center" />
+            <CheckBox
+                Grid.Row="2"
+                Grid.Column="1"
+                CheckedChanged="DarkCheckedChanged"
+                HorizontalOptions="End"
+                IsChecked="{Binding IsDark}"
+                IsEnabled="{Binding IsDarkEnable}" />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
